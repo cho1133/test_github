@@ -11,11 +11,10 @@ jobs:
       with:
         python-version: '3.8'
     - name: Install dependencies
-    
     run: |
     python -m pip install --upgrade pip
     pip install black pylint
-- name: Run Black
-  run: black --check .
-- name: Run Pylint
-  run: pylint **/*.py
+    - name: Run Black
+      run: black --check .
+    - name: Run Pylint
+      run: pylint **/*.py
